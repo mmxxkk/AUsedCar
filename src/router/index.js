@@ -4,16 +4,37 @@ import HomeView from '../views/HomeView.vue'
 const routes = [
   {
     path: '/',
+    redirect: '/index'
+  },
+  {
+    path: '/index',
     name: 'home',
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/usedcar',
+    name: 'usedcar',
+    component: () => import(/* webpackChunkName: "usedcar" */ '../views/UsedCar.vue')
+  },
+  {
+    path: '/newcar',
+    name: 'newcar',
+    component: () => import(/* webpackChunkName: "newcar" */ '../views/NewCar.vue')
+  },
+  {
+    path: '/sellcar',
+    name: 'sellcar',
+    component: () => import(/* webpackChunkName: "sellcar" */ '../views/SellCar.vue')
+  },
+  {
+    path: '/usedfinance',
+    name: 'usedfinance',
+    component: () => import(/* webpackChunkName: "usedfinance" */ '../views/UsedFinance.vue')
+  },
+  {
+    path: '/usedservice',
+    name: 'usedservice',
+    component: () => import(/* webpackChunkName: "usedservice" */ '../views/UsedService.vue')
   }
 ]
 
